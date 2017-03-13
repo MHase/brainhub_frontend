@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Rambla');
+
+.container {
+  width: 360px;
+  height: 480px;
+  position: relative;
+  border-radius: 30px;
+}
+
+#player {
+  background-image: url('img/Icona_Pop_2012-119598_ETOALL_low.png');
+  width: inherit;
+  height: inherit;
+}
+
+.fading {
+  background-color: rgba(84,66,130, 0.26);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.top {
+  height: 65px;
+  border-radius: 30px 30px 0px 0px;
+  background-color: rgba(42,34,77, 0.6);
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+
+.triple {
+  bottom: 0; left: 0; top: 0; right: 0;
+  margin: auto;
+  width: 96px;
+  position: absolute;
+  height: 17px
+}
+
+.shuffle {
+  bottom: 0; left: 0; top: 0; right: 0;
+  margin: auto;
+  position: absolute;
+  background-image: url('img/shuffle.png');
+  width: 17px;
+  height: 16px;
+}
+
+.repeat1 {
+  background-image: url('img/repeat1.png');
+  width: 17px;
+  height: 17px;
+  float: right;
+}
+.repeat4 {
+  background-image: url('img/repeat4.png');
+  width: 17px;
+  height: 16px;
+  float: left;
+}
+
+.menu {
+  right: 20px;
+  position: absolute;
+  background-image: url('img/menu.png');
+  width: 17px;
+  height: 14px;
+  /*vertical-align: middle*/
+}
+
+#menu{
+  cursor: pointer;
+}
+.bottom {
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(42,32,77, 0.6);
+  width: inherit;
+  height: 207px;
+  border-radius: 0px 0px 30px 30px;
+  text-align: center;
+}
+
+h1, p{
+  font-family: 'Rambla', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 18px;
+}
+p {
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.btn_bottom {
+  bottom: 0px;
+  height: 135px;
+  width: inherit;
+  background-color: #eeeff5;
+  border-radius: 0px 0px 30px 30px;
+  position: absolute;
+}
+.triple_bottom {
+  width: 159px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.play {
+  bottom: 0; left: 0; top: 0; right: 0;
+  margin: auto;
+  position: absolute;
+  background-image: url('img/pause.png');
+  width: 50px;
+  height: 50px;
+}
+
+.previous {
+  background-image: url('img/previous.png');
+  width: 36px;
+  height: 36px;
+  float: left;
+}
+.next {
+  background-image: url('img/next.png');
+  width: 36px;
+  height: 36px;
+  float: right;
+  margin-left: 80px
+}
+
+.shfav {
+  height: inherit;
+  /*position: relative;*/
+  align-items: center;
+  display: flex;
+}
+
+.fav {
+  right: 20px;
+  /*vertical-align: middle;*/
+  position: absolute;
+  background-image: url('img/fav.png');
+  width: 36px;
+  height: 36px;
+}
+
+.share {
+  left: 20px;
+  vertical-align: middle;
+  position: absolute;
+  background-image: url('img/share.png');
+  width: 36px;
+  height: 36px;
+}
+
+input[type=range] {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0 0 0 0;
+  width: inherit;
+  height: 7px;
+  z-index: 1;
+  padding: 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-image: url('img/audio.png');
+  height: 28px;
+  width: 28px;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 0px;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  background: transparent;
+  background-image: url('img/audio.png');
+}
+input[type=range]::-moz-range-track {
+  background: transparent;
+  border: 0;
+}
+
+input[type=range]::-ms-thumb {
+  border: none;
+  background-image: url('img/audio.png');
+  height: 28px;
+  width: 28px;
+
+  /*position: relative;*/
+}
+input[type=range]::-ms-track {
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 0 0;
+  color: transparent;
+}
+input[type="range"].slider::-ms-tooltip {
+  display: none;
+}
+.range::-ms-fill-lower {
+  background-color: #ffffff;
+}
+
+
+
+* {
+  outline: none;
+}
