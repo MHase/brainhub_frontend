@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 	let container = document.getElementsByClassName('song_playlist');
 	Ps.initialize(container[0], {
-		wheelSpeed: 0.2
+		wheelSpeed: 0.8
 	});
 // $('.song_playlist').perfectScrollbar();
 
