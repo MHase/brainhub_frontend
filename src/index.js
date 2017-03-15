@@ -11,6 +11,8 @@ var songs = [
 	{time:"4:07", artist:"Pharrel Williams", title:"Happy"}
 ];
 
+var Ps = require('./perfect-scrollbar.min.js');
+
 $(document).ready(function(){
 
 	var container = document.getElementsByClassName('song_playlist');
@@ -50,7 +52,6 @@ $(document).ready(function(){
 
 	$('.song_playlist').bind('scroll', function()
     {
-			console.log(Math.ceil($(this).scrollTop()) + " " + $(this).innerHeight() + " " + $(this)[0].scrollHeight);
       if(Math.ceil($(this).scrollTop()) + $(this).innerHeight() >= $(this)[0].scrollHeight)
 				$('.bottom_playlist').css('visibility', 'hidden');
       else
@@ -70,8 +71,8 @@ $(document).ready(function(){
 });
 
 function playlistToggle() {
-	$('.playlist').show();
-	$('#player').hide();
+	$('.playlist').hide();
+	$('#player').show();
 	$('body').on('click','#menu',function(){
 	  $('.playlist').slideDown();
 		$('#player').fadeOut();

@@ -1,0 +1,29 @@
+{
+  "name": "brainhub_frontend_task",
+  "version": "1.0.0",
+  "description": "frontend-developer-recruitment-task",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --progress",
+    "http": "http-server -o",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MHase/brainhub_frontend.git"
+  },
+  "author": "Maciej Sykula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MHase/brainhub_frontend/issues"
+  },
+  "homepage": "https://github.com/MHase/brainhub_frontend#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.24.0",
+    "http-server": "^0.9.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
