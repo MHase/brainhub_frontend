@@ -239,8 +239,6 @@ input[type=range]::-ms-thumb {
   background-image: url('../img/audio.png');
   height: 28px;
   width: 28px;
-
-  /*position: relative;*/
 }
 input[type=range]::-ms-track {
   background: transparent;
@@ -265,14 +263,25 @@ input[type="range"].slider::-ms-tooltip {
   cursor: pointer;
 }
 
+.btn:active {
+  transform-origin: center;
+  -webkit-transform:translateY(2px); /* Safari and Chrome */
+  -moz-transform:translateY(2px);); /* Firefox */
+  -ms-transform:translateY(2px);); /* IE 9 */
+  transform:translateY(2px););
+}
 #canvas {
   width: 63px;
   height: 63px;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-/* IE10+ CSS styles go here */
-  .ie {
-    transform: translateY(-50%);
-  }
+
+_::-webkit-:host:not(:root:root), .ie.sf {
+  transform: translateY(50px);;
+}
+_::-webkit-:host:not(:root:root), .back.ie.sf {
+  transform: translateY(50%);
+}
+_::-webkit-:host:not(:root:root), .menu.ie.sf {
+  transform: translateY(25px);
 }
