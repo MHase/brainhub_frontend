@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Rambla');
 
+body {
+  background: url('../img/background.png')  no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
 .container {
   width: 360px;
   height: 480px;
   position: relative;
   border-radius: 30px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #player {
-  background-image: url('img/Icona_Pop_2012-119598_ETOALL_low.png');
+  background-image: url('../img/Icona_Pop_2012-119598_ETOALL_low.png');
   width: inherit;
   height: inherit;
 }
@@ -28,6 +42,8 @@
   position: relative;
   align-items: center;
   display: flex;
+  overflow-y: hidden;
+  padding: 0 0 0 0;
 }
 
 .triple {
@@ -42,19 +58,19 @@
   bottom: 0; left: 0; top: 0; right: 0;
   margin: auto;
   position: absolute;
-  background-image: url('img/shuffle.png');
+  background-image: url('../img/shuffle.png');
   width: 17px;
   height: 16px;
 }
 
 .repeat1 {
-  background-image: url('img/repeat1.png');
+  background-image: url('../img/repeat1.png');
   width: 17px;
   height: 17px;
   float: right;
 }
 .repeat4 {
-  background-image: url('img/repeat4.png');
+  background-image: url('../img/repeat4.png');
   width: 17px;
   height: 16px;
   float: left;
@@ -63,15 +79,17 @@
 .menu {
   right: 20px;
   position: absolute;
-  background-image: url('img/menu.png');
-  width: 17px;
-  height: 14px;
-  /*vertical-align: middle*/
 }
 
-#menu{
-  cursor: pointer;
+@-moz-document url-prefix() {
+    .menu {top: 25px;}
 }
+
+.menu .fa-bars {
+  color: #898ba1;
+  font-size: 19px;
+}
+
 .bottom {
   position: absolute;
   bottom: 0px;
@@ -82,7 +100,7 @@
   text-align: center;
 }
 
-h1, p{
+h1, p {
   font-family: 'Rambla', sans-serif;
   color: white;
 }
@@ -114,19 +132,32 @@ p {
   bottom: 0; left: 0; top: 0; right: 0;
   margin: auto;
   position: absolute;
-  background-image: url('img/pause.png');
   width: 50px;
   height: 50px;
+  font-size:12px;
+}
+
+.round-button {
+	box-sizing: border-box;
+	padding-top: 12px;
+	border-radius: 50%;
+	color:#ffffff;
+	text-align:center;
+	background-color: #60558f;
+}
+
+.fa-play {
+    padding-left: 5px;
 }
 
 .previous {
-  background-image: url('img/previous.png');
+  background-image: url('../img/previous.png');
   width: 36px;
   height: 36px;
   float: left;
 }
 .next {
-  background-image: url('img/next.png');
+  background-image: url('../img/next.png');
   width: 36px;
   height: 36px;
   float: right;
@@ -142,23 +173,35 @@ p {
 
 .fav {
   right: 20px;
-  /*vertical-align: middle;*/
   position: absolute;
-  background-image: url('img/fav.png');
+  /*background-image: url('../img/fav.png');*/
   width: 36px;
   height: 36px;
+}
+
+.fav > i {
+  color: #ed5e74;
 }
 
 .share {
   left: 20px;
   vertical-align: middle;
   position: absolute;
-  background-image: url('img/share.png');
   width: 36px;
   height: 36px;
 }
 
+.round-button.share, .round-button.fav {
+  padding-top: 10px;
+  background-color: #ffffff;
+}
+
+.share > i {
+  color: #60558f;
+}
+
 input[type=range] {
+  cursor: pointer;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -173,7 +216,7 @@ input[type=range] {
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background-image: url('img/audio.png');
+  background-image: url('../img/audio.png');
   height: 28px;
   width: 28px;
 }
@@ -184,7 +227,7 @@ input[type=range]::-moz-range-thumb {
   height: 28px;
   width: 28px;
   background: transparent;
-  background-image: url('img/audio.png');
+  background-image: url('../img/audio.png');
 }
 input[type=range]::-moz-range-track {
   background: transparent;
@@ -193,14 +236,13 @@ input[type=range]::-moz-range-track {
 
 input[type=range]::-ms-thumb {
   border: none;
-  background-image: url('img/audio.png');
+  background-image: url('../img/audio.png');
   height: 28px;
   width: 28px;
 
   /*position: relative;*/
 }
 input[type=range]::-ms-track {
-  cursor: pointer;
   background: transparent;
   border-color: transparent;
   border-width: 0 0;
@@ -217,4 +259,20 @@ input[type="range"].slider::-ms-tooltip {
 
 * {
   outline: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+#canvas {
+  width: 63px;
+  height: 63px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10+ CSS styles go here */
+  .ie {
+    transform: translateY(-50%);
+  }
 }

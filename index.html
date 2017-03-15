@@ -5,9 +5,16 @@
     <meta charset="utf-8">
     <title>Brainhub</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="playlist.css">
-    <script src="script.js" charset="utf-8"></script>
+    <!-- <link rel="stylesheet" href="css/simplebar.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/playlist.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    <script src="js/script.js" charset="utf-8"></script>
+    <script src="js/perfect-scrollbar.jquery.min.js" charset="utf-8"></script>
+    <!-- <script src="js/jquery.nicescroll.min.js" charset="utf-8"></script> -->
+    <script src="js/simplebar.js" charset="utf-8"></script>
+    <script src="js/perfect-scrollbar.min.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -20,25 +27,26 @@
 
             <div class="top">
                 <div class="triple">
-                    <div class="repeat1"></div>
-                    <div class="shuffle"></div>
-                    <div class="repeat4"></div>
+                    <div class="btn repeat1"></div>
+                    <div class="btn shuffle"></div>
+                    <div class="btn repeat4"></div>
                 </div>
-                <div id="menu" class="menu"></div>
+                <div class="btn menu ie" id="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
             </div>
             <div class="bottom">
                 <h1>Icona Pop</h1>
                 <p>Still Don't Know </p>
                 <div class="btn_bottom">
-                    <input type="range" name="" value="40" class="range">
+                    <input type="range" value="40" class="range">
                     <div class="triple triple_bottom">
-                        <div class="previous"></div>
-                        <div class="play"></div>
-                        <div class="next"></div>
+                        <div class="btn previous"></div>
+                        <canvas id="canvas" class="play" width="300" height="300"></canvas>
+                        <div class="btn round-button play"><i class="fa fa-play fa-2x" aria-hidden="true"></i></div>
+                        <div class="btn next"></div>
                     </div>
                     <div class="shfav">
-                        <div class="share"></div>
-                        <div class="fav"></div>
+                      <div class="btn round-button share ie"><i class="fa fa-share-alt" aria-hidden="true"></i></div>
+                      <div class="btn round-button fav ie"><i class="fa fa-heart" aria-hidden="true"></i></div>
                     </div>
                 </div>
             </div>
@@ -46,9 +54,10 @@
         </div>
         <div class="playlist">
           <div class="top_playlist">
-            <div class="back"></div>
+            <div class="btn back ie"></div>
             <h1>Playlist</h1>
           </div>
+          <!-- <div data-simplebar class="song_playlist"> -->
           <div class="song_playlist">
             <div class="songs">
 
