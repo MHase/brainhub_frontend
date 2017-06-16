@@ -25,3 +25,6 @@ npm start
 
 * [perfect-scrollbar](https://github.com/noraesae/perfect-scrollbar) - Minimalistic but perfect custom scrollbar plugin
 * [fontawesome](http://fontawesome.io/) - The iconic font and CSS toolkit
+
+### Preview avaiable at:
+[mhase.github.io](https://mhase.github.io/brainhub/)
